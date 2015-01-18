@@ -48,7 +48,7 @@ public class BlogController {
 
     public BlogController(String mongoURIString) throws IOException {
         final MongoClient mongoClient = new MongoClient(new MongoClientURI(mongoURIString));
-//        final DB blogDatabase = mongoClient.getDB("blog");
+        final DB blogDatabase = mongoClient.getDB("blog");
 
         userDAO = new UserDAO(blogDatabase);
         sessionDAO = new SessionDAO(blogDatabase);
