@@ -34,7 +34,7 @@ public class SessionDAO {
 
 
     public String findUserNameBySessionId(String sessionId) {
-        //DBObject session = getSession(sessionId);
+        DBObject session = getSession(sessionId);
 
         if (session == null) {
             return null;
